@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'rails_admin'
 gem 'rails',        '4.2.2'
 gem 'bootstrap-sass',       '3.2.0.0'
