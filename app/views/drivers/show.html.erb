@@ -1,0 +1,33 @@
+<p><%= @driver.name %>, <%= @driver.email %></p>
+
+
+<h3>List of Jobs</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Pickup time</th>
+            <th>Weight</th>
+         </tr>
+    </thead>
+    <tbody>
+    <% @packages.each do |p| %>
+        <% if @driver.id == p.driver_id %>
+            <tr>
+                <td><%= p.name %></td>
+                <td><%= p.email %></td>
+                <td><%= p.phone %></td>
+                <td><%= p.address %></td>
+                <td><%= p.pickup_time %></td>
+                <td><%= p.weight %></td>
+            </tr>
+        <% end %> 
+    <% end %>
+    </tbody>
+</table>
+
+ 
+

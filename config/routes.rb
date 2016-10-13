@@ -1,9 +1,27 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-
-  get 'static_pages/help'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'admin' => 'rails_admin/main#dashboard'
+  
+  root             'static_pages#home'
+  get 'help'    => 'static_pages#help'
+  get 'about'   => 'static_pages#about'
+  get 'contact' => 'static_pages#contact'
+  get 'signup'  => 'users#new'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+  resources :users
+  
+  get 'signup_for_drivers' => 'drivers#new'
+  resources :drivers
+  
+  
+  get 'packages' => 'packages#new'
+  resources :packages
+  
+  get 'jobs' => 'jobs#show'
+  resources :jobs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
