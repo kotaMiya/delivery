@@ -21,7 +21,7 @@
       <%= f.text_field :pickup_time, class: 'form-control' %>
       
       <%= f.label :Package_type %>
-      <%= f.text_field :package_type, class: 'form-control' %>
+      <%= f.select :package_type, ['Normal', 'Fragile'], class: 'form-control' %>
       
       <%= f.label :Weight %>
       <%= f.text_field :weight, class: 'form-control' %>
