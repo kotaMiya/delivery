@@ -162,6 +162,7 @@ table tbody th,
 table tbody td {
 	padding: .6em 3em;
 	border-bottom: 1px solid #aaa;
+	
 }
 table thead th {
 	background-color: #ddd;
@@ -176,4 +177,8 @@ table tbody td {
 table tbody tr:last-child th,
 table tbody tr:last-child td {
 	border-bottom: none;
+}
+
+#aaaa {
+  width: 200px;
 }

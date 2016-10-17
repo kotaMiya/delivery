@@ -12,6 +12,7 @@
             <th>Pickup time</th>
             <th>Package type</th>
             <th>Weight</th>
+            <th>Status</th>
          </tr>
     </thead>
     <tbody>
@@ -25,6 +26,7 @@
                 <td><%= p.pickup_time %></td>
                 <td><%= p.package_type %></td>
                 <td><%= p.weight %></td>
+                <td><%= select_tag '#', options_for_select(["picked up", "delivered", "not delivered", "returned"]), :style => "width:120px" %></td>
             </tr>
         <% end %> 
     <% end %>
